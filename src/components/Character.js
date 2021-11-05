@@ -4,11 +4,24 @@ import React from 'react';
 
 const Characters = (props) => {
 
-    const {name} = props;
+    const {name, height, characterList } = props;
 
    return (
        <div>
-           {name};
+             {characterList.map((character) => {
+        return (
+          <>
+            <div>
+                <h3>{character.name}</h3>
+            </div>
+            <div>
+                <p>
+                    Height : {height}
+                </p>
+            </div>
+          </>
+        )
+      })}
        </div>
    )
 }
