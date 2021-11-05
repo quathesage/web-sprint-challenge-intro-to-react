@@ -8,7 +8,6 @@ const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
   const [characterList, setCharacterList] = useState([]);
-  const [page, setPage] = useState(1);
 
 
 
@@ -29,7 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-     <Characters characterList={characterList} />
+      <Characters key={characterList.url} characterList={characterList}/>
     </div>
   );
 }
