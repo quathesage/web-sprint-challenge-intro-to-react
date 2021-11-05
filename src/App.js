@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import {useState, useEffect} from 'react';
 import './App.css';
@@ -7,11 +8,21 @@ const App = () => {
   // the state properties here.
   const [characterList, setCharacterList] = useState([]);
 
-  
+
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+
+  useEffect(() => {
+    axios.get('https://swapi.dev/api/people')
+    .then(res => {
+      console.log(res)
+    })
+    .catch(error => {
+      console.error(error);
+    })
+  },[])
 
   return (
     <div className="App">
