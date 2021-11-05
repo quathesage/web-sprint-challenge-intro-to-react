@@ -3,14 +3,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+
+
   h3 {
       font-size: 30px;
+      border-bottom: 1px dashed #FFE81F;
       color: #FFE81F;
-      background-color: black;
       text-align: center;
       display: flex;
       justify-content: center;
-      width: 25%;
+      width: 75%;
       margin: 20px auto;
       padding: 5px;
       border-radius: 10px;
@@ -19,15 +24,17 @@ const Container = styled.div`
   p {
       font-weight: bold;
       font-family: sans-serif;
-      background-color: black;
       color: #FFE81F;
-      width: 25%;
+      width: 75%;
       margin: 20px auto;
   }
 `
 const Wrap = styled.div`
-  display: flex;
-  flex-direction: flex-wrap;
+  border-radius: 500px;
+  width: 50%;
+  align-content: center;
+  background-color: black;
+  margin-bottom: 2rem;
 `
 
 
@@ -43,7 +50,7 @@ const Characters = (props) => {
        <Container>
              {characterList.map((character) => {
         return (
-          <>
+          <Wrap>
             <div>
                 <h3>{character.name}</h3>
             </div>
@@ -61,7 +68,7 @@ const Characters = (props) => {
                     Hair Color : {character.hair_color}
                 </p>
             </div>
-          </>
+          </Wrap>
         )
       })}
        </Container>
