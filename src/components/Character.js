@@ -4,7 +4,7 @@ import React from 'react';
 
 const Characters = (props) => {
 
-    const {name, height, characterList } = props;
+    const { characterList } = props;
 
    return (
        <div>
@@ -16,7 +16,16 @@ const Characters = (props) => {
             </div>
             <div>
                 <p>
-                    Height : {height}
+                    Height : {character.height}
+                </p>
+                <p>
+                    Birth Year : {character.birth_year}
+                </p>
+                <p>
+                    Gender : {character.gender}
+                </p>
+                <p>
+                    Hair Color : {character.hair_color}
                 </p>
             </div>
           </>
