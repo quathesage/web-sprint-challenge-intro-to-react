@@ -8,6 +8,7 @@ const Container = styled.div`
      justify-content: space-evenly;
 
 
+
   h3 {
       font-size: 30px;
       border-bottom: 1px dashed #FFE81F;
@@ -24,17 +25,18 @@ const Container = styled.div`
   p {
       font-weight: bold;
       font-family: sans-serif;
-      color: #FFE81F;
+      color: #f0e000;
       width: 75%;
       margin: 20px auto;
   }
 `
 const Wrap = styled.div`
   border-radius: 500px;
-  width: 50%;
+  width: 40%;
   align-content: center;
-  background-color: black;
+  background-color: #beae93;
   margin-bottom: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 `
 
 

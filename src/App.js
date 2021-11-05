@@ -3,6 +3,11 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import './App.css';
 import Characters from './components/Character';
+import styled from 'styled-components';
+
+const Header = styled.h1`
+box-shadow: 0 0 20px #999;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
